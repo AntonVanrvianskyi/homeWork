@@ -2,3 +2,16 @@ img{
 
     width: 300px;
 }
+.link{
+    text-decoration: none;
+    background-color: blue;
+    color: aquamarine;
+}
+h1,p{
+    background-color: brown;
+    color: aquamarine;
+}
+ul{
+    background-color: brown;
+    color: aquamarine;
+}
