@@ -1,0 +1,16 @@
+.product-image{
+    width: 200px;
+}
+.product-card{
+    text-transform: uppercase;
+}
+/*p{*/
+/*    font-size: 20px;*/
+/*    color: red;*/
+/*}*/
+.status{
+
+}
+.age{
+    display: flex;
+}
