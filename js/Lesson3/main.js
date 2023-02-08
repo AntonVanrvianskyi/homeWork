@@ -36,11 +36,12 @@
 //
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 
-// let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-// for (const itemOfArray of listOfItems) {
-//     document.write(`<ul><li>${itemOfArray}</li></ul>`)
-// }
-
+let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+document.write(`<ul>`)
+for (const itemOfArray of listOfItems) {
+    document.write(`<li>${itemOfArray}</li>`)
+}
+document.write(`</ul>`)
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону  Зробити адекватну стилізацію
 // Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
