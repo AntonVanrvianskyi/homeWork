@@ -1,0 +1,13 @@
+.user-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.user-block{
+    width: 350px;
+    height: 300px;
+    box-sizing: border-box;
+    margin: 20px 100px 20px 100px;
+}
