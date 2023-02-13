@@ -153,47 +153,93 @@
 // - знайти книжку/ки які писав 1 автор
 
 
-let arrBook =[
- {title:'ergrbf',    page:435, authors:[{name:'anton', age: 23},{name:'anton', age: 23},{name:'anton', age: 23}, {name:'anton', age: 23}], genre: ['comedy', 'roman', 'fantstic']},
- {title:'dgllkmng', page:35, authors:[{name:'anton', age: 23},{name:'anton', age: 23}, {name:'anton', age: 23}], genre: ['comedy', 'roman', 'fantstic', 'fgbdfn']},
- {title:'eeeeee',   page:33, authors:[{name:'anton', age: 23}, {name:'anton', age: 23}], genre: ['comedy', 'roman', 'fantstic']},
- {title:'tttttttt', page:45, authors:[{name:'anton', age: 23}, {name:'anton', age: 23}], genre: ['comedy', 'roman']},
- {title:'tyyyuku',  page:45, authors:[{name:'anton', age: 23}, {name:'anton', age: 23}], genre: ['comedy', 'roman', 'fantstic']},
- {title:'qqqqqqqqq', page:500, authors:[{name:'anton', age: 23},{name:'anton', age: 23}, {name:'anton', age: 23}], genre: ['comedy', 'roman', 'fantstic']},
- {title:'retrh',     page:120, authors:[{name:'anton', age: 23}, {name:'anton', age: 23}], genre: ['comedy', 'roman']},
- {title:'rhtjtgukmh', page:11, authors:[{name:'anton', age: 23}, {name:'anton', age: 23}], genre: ['comedy', 'roman']}
-];
-// let maxPage = arrBook[0].page;
+let arrBook = [
+ {
+  title: "Around the world in 350 days",
+  pageCount: 538,
+  genres: ["adventure"],
+  authors: [{
+   name: "Zhul Vern",
+   age: 47
+  }, {
+   name: "Felisity Smoak",
+   age: 22
+  }]
+
+ },
+ {
+  title: "Harry Potter",
+  pageCount: 680,
+  genres: ["fantasy", "horror"],
+  authors: [{
+
+   name: "Joan Roalling",
+   age: 38
+  }]
+ },
+ {
+  title: "Angel Empire",
+  pageCount:340,
+  genres: ["detective", "romantic", "drama"],
+  authors: [
+   {
+    name: "Bernar Verber",
+    age: 60
+   }, {
+    name: "Amanda Waller",
+    age: 60
+   }
+
+  ]
+ }
+]
+
+// let maxPage = arrBook[0].pageCount;
 // for (const book of arrBook) {
-//     if (book.page>maxPage){
-//         maxPage = book.page;
+//     if (book.pageCount>maxPage){
+//         maxPage = book.pageCount;
 //
 //     }
 //
 // }
-// let maxGenre = arrBook[0].genre[0];
-// for (const element of arrBook) {
-//     if(element.genre>maxGenre ){
-//         maxGenre = element.genre;
+// console.log(maxPage)
+
+// let maxGenre = arrBook[0].genres;
+// for (const string of arrBook) {
+//  if (string.genres.length>maxGenre.length){
+//   maxGenre= string.genres;
+//  }
 //
-//     }
 // }
+// console.log(maxGenre)
 
 // let maxTitle = arrBook[0].title;
-// for (const maxTitleElement of arrBook) {
-//     if (maxTitleElement.title>maxTitle){
-//         maxTitle = maxTitleElement;
-//
-//     }
+// for (const string of arrBook) {
+//  if (string.title.length>maxTitle.length){
+//   maxTitle= string.title;
+//  }
 //
 // }
-for (const arrBookElement of arrBook) {
-  if (arrBookElement.authors>1){
-   console.log(arrBookElement)
-  }
+// console.log(maxTitle)
 
-}
+// let maxAuthors = arrBook[0].authors;
+// for (const string of arrBook) {
+//  if (string.authors.length > maxAuthors.length){
+//   maxAuthors= string.authors;
+//  }
+//
+// }
+// console.log(maxAuthors)
 
+
+// let maxAuthors
+// for (const string of arrBook) {
+//  if (string.authors.length > 0 && string.authors.length < 2){
+//   maxAuthors= string.authors;
+//  }
+//
+// }
+// console.log(maxAuthors)
 
 
 
