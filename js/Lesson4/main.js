@@ -96,17 +96,16 @@
 // }
 // minNumber(arr)
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-// let arr = [32,35,56,67,567];
+// let arr = [1,2,3,4];
 // function sum (arr){
-//     let min = 0
+//         let min = 0;
 //     for (let i = 0; i<arr.length; i++){
 //         min += arr[i]
 //
-//         console.log(min)
-//      }
-//   Не виводить суму в чому помилка? Не можу знайти проблему
 //
-// }
+//      }
+//     console.log(min)
+//  }
 // sum(arr)
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
@@ -122,17 +121,14 @@
 // change(arr, 0,1)
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
-//  let arr = [{currency:'USD',value:40},{currency:'EUR',value:42}];
-// function exchange (sum,currencyValues,exchangeCurrency ){
-//     // let arr = [{currency:'USD',value:40},{currency:'EUR',value:42}];
-//     if(currencyValues === "USD"){
-//         let res = sum/arr[0].value;
-//         return res;
-//     }
-//     if (currencyValues === "EUR"){
-//         let num = sum/arr[1].value;
-//         return num;
-//     }
-// }
-// let foo = exchange(1000, 'EUR');
-// console.log(foo);
+ let arr = [{currency:'USD',value:40},{currency:'EUR',value:42}];
+function exchange (sum, arr, exchangeCurrency ){
+    for (const sumElement of arr) {
+        if(exchangeCurrency===sumElement.currency){
+            let res = sum/sumElement.value
+            console.log(res)
+        }
+    }
+
+}
+exchange(10000, arr, 'EUR')
