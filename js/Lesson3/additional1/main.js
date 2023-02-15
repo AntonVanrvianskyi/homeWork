@@ -224,7 +224,7 @@ let arrBook = [
 
 // let maxAuthors = arrBook[0].authors;
 // for (const string of arrBook) {
-//  if (string.authors.length > maxAuthors.length){
+//  if (string.authors.length >= maxAuthors.length){
 //   maxAuthors= string.authors;
 //  }
 //
