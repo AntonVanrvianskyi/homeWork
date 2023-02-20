@@ -83,42 +83,43 @@
 
 let cards = [
     {value: 6, color: 'black', cardSuit: 'pika'},
-    {value: 6, color: 'black', cardSuit: 'hresta'},
-    {value: 6, color: 'red', cardSuit: 'cherva'},
-    {value: 6, color: 'red', cardSuit: 'buba'},
-    {value: 7, color: 'black', cardSuit: 'pika'},
     {value: 7, color: 'black', cardSuit: 'hresta'},
-    {value: 7, color: 'red', cardSuit: 'cherva'},
-    {value: 7, color: 'red', cardSuit: 'buba'},
-    {value: 8, color: 'black', cardSuit: 'pika'},
-    {value: 8, color: 'black', cardSuit: 'hresta'},
     {value: 8, color: 'red', cardSuit: 'cherva'},
-    {value: 8, color: 'red', cardSuit: 'buba'},
-    {value: 9, color: 'black', cardSuit: 'pika'},
-    {value: 9, color: 'black', cardSuit: 'hresta'},
-    {value: 9, color: 'red', cardSuit: 'cherva'},
     {value: 9, color: 'red', cardSuit: 'buba'},
     {value: 10, color: 'black', cardSuit: 'pika'},
+    {value: 6, color: 'black', cardSuit: 'hresta'},
+    {value: 7, color: 'red', cardSuit: 'cherva'},
+    {value: 8, color: 'red', cardSuit: 'buba'},
+    {value: 9, color: 'black', cardSuit: 'pika'},
     {value: 10, color: 'black', cardSuit: 'hresta'},
-    {value: 10, color: 'red', cardSuit: 'cherva'},
-    {value: 10, color: 'red', cardSuit: 'buba'},
+    {value: 6, color: 'red', cardSuit: 'cherva'},
+    {value: 7, color: 'red', cardSuit: 'buba'},
+    {value: 8, color: 'black', cardSuit: 'pika'},
+    {value: 9, color: 'red', cardSuit: 'cherva'},
+    {value:10, color: 'red', cardSuit: 'buba'},
+    {value: 6, color: 'red', cardSuit: 'buba'},
+    {value: 7, color: 'black', cardSuit: 'pika'},
+    {value:8, color: 'black', cardSuit: 'hresta'},
+    {value: 9, color: 'black', cardSuit: 'hresta'},
     {value: 'valet', color: 'black', cardSuit: 'pika'},
-    {value: 'valet', color: 'black', cardSuit: 'hresta'},
+    {value: 10, color: 'red', cardSuit: 'cherva'},
     {value: 'valet', color: 'red', cardSuit: 'cherva'},
-    {value: 'valet', color: 'red', cardSuit: 'buba'},
-    {value: 'dama', color: 'black', cardSuit: 'pika'},
-    {value: 'dama', color: 'black', cardSuit: 'hresta'},
     {value: 'dama', color: 'red', cardSuit: 'cherva'},
-    {value: 'dama', color: 'red', cardSuit: 'buba'},
-    {value: 'korol', color: 'black', cardSuit: 'pika'},
-    {value: 'korol', color: 'black', cardSuit: 'hresta'},
-    {value: 'korol', color: 'red', cardSuit: 'cherva'},
     {value: 'korol', color: 'red', cardSuit: 'buba'},
     {value: 'tuz', color: 'black', cardSuit: 'hresta'},
+    {value: 'valet', color: 'black', cardSuit: 'hresta'},
+    {value: 'dama', color: 'black', cardSuit: 'hresta'},
+    {value: 'korol', color: 'black', cardSuit: 'hresta'},
     {value: 'tuz', color: 'black', cardSuit: 'pika'},
+    {value: 'valet', color: 'red', cardSuit: 'buba'},
+    {value: 'dama', color: 'red', cardSuit: 'buba'},
+    {value: 'korol', color: 'black', cardSuit: 'pika'},
     {value: 'tuz', color: 'red', cardSuit: 'cherva'},
+    {value: 'dama', color: 'black', cardSuit: 'pika'},
+    {value: 'korol', color: 'red', cardSuit: 'cherva'},
     {value: 'tuz', color: 'red', cardSuit: 'buba'}
 ];
+
 // - знайти піковий туз
 // let find = cards.find(value => {
 //     if (value.value === 'tuz' && value.cardSuit === 'pika') return value
@@ -139,12 +140,12 @@ let cards = [
 // console.log(filter);
 
 // - всі трефи від 9 та більше
-// let filter  = cards.filter((value, index) =>{
-//     if (value.cardSuit==='hresta' && index > 9)return value
-//
+// let filter = cards.filter(value => {
+//     if (value.cardSuit==='hresta' && value.value!==6 && value.value!==7 && value.value!==8){
+//         return value
+//     }
 // })
 // console.log(filter);
-
 
 // Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 // // {
@@ -245,10 +246,6 @@ let coursesArray = [
 // --написати пошук всіх об'єктів, в який в modules є docker
 // let filter1 = coursesArray.filter(value => value.modules.includes('sass'))
 // let filter2 = coursesArray.filter(value => value.modules.includes('docker'))
-//
-//
-//
 // console.log(filter2);
-
 
 
