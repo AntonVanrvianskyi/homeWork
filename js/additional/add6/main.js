@@ -1,13 +1,13 @@
 // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
 // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
 // let cutString = (str, n)=>{
-//     if (typeof str === 'string'){
-//         str.split(n,',')
-//         return str
+//     let res = [];
+//     for(let i = 0 ; i < str.length; i += n) {
+//         res.push(str.substr(i, n));
 //     }
-//
+//     return res;
 // }
-// console.log(cutString('наслаждение',3))
+// console.log(cutString('наслаждение', 3));
 
 // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
 //     let str = 'Каждый охотник желает знать';
@@ -53,7 +53,7 @@
 //     for (const item of str) {
 //         for (const value of a) {
 //             if (item===value){
-//                 res = str.replaceAll(value, ' ')
+//                 res = str.replaceAll(value, ' ').replace(' ','');
 //             }
 //         }
 //
@@ -113,8 +113,22 @@
 // someeMAIL@gmail.com
 // someeMAIL@i.ua
 // some.email@gmail.com
-
-
+// let validator = (str)=>{
+//    const idDog = str.indexOf('@');
+//    const idPoint = str.indexOf('.')
+//
+//         if (idDog < 1 || idDog === str.length-1){
+//             console.log('ne pravylno @');
+//     }else if (idPoint +2 >= idPoint || idPoint === str.length - 1){
+//             console.log('ne korektno .');
+//     }else {
+//             console.log('true')
+//     }
+//
+//
+//
+// }
+// validator('some.email@gmail.com');
 
 
 // let coursesArray = [
