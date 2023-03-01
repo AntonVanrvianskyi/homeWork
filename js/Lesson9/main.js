@@ -220,10 +220,10 @@ for (const item of coursesArray) {
     titleDiv.innerText = item.title;
 
     let monthDiv = document.createElement('div');
-    monthDiv.innerText = item.monthDuration;
+    monthDiv.innerText = item.monthDuration +' '+ 'month';
 
     let hourDiv = document.createElement('div');
-    hourDiv.innerText = item.hourDuration;
+    hourDiv.innerText = item.hourDuration +' '+ 'hour';
 
     let ulList = document.createElement('ul');
     ulList.classList.add('list');
