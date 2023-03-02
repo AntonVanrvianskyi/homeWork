@@ -142,104 +142,180 @@
 //
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
-let coursesArray = [
-    {
-        title: 'JavaScript Complex',
-        monthDuration: 5,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-    },
-    {
-        title: 'Java Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'java core',
-            'java advanced']
-    },
-    {
-        title: 'Python Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'python core',
-            'python advanced']
-    },
-    {
-        title: 'QA Complex',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-    },
-    {
-        title: 'FullStack',
-        monthDuration: 7,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'react',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'node.js',
-            'python',
-            'java']
-    },
-    {
-        title: 'Frontend',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-    }
-];
-let headDiv = document.createElement('div');
-headDiv.classList.add('wrap');
+// let coursesArray = [
+//     {
+//         title: 'JavaScript Complex',
+//         monthDuration: 5,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+//     },
+//     {
+//         title: 'Java Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'git',
+//             'java core',
+//             'java advanced']
+//     },
+//     {
+//         title: 'Python Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'python core',
+//             'python advanced']
+//     },
+//     {
+//         title: 'QA Complex',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+//     },
+//     {
+//         title: 'FullStack',
+//         monthDuration: 7,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'react',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'git',
+//             'node.js',
+//             'python',
+//             'java']
+//     },
+//     {
+//         title: 'Frontend',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+//     }
+// ];
+// let headDiv = document.createElement('div');
+// headDiv.classList.add('wrap');
+//
+//
+// for (const item of coursesArray) {
+//     let titleDiv = document.createElement('div');
+//     titleDiv.innerText = item.title;
+//
+//     let monthDiv = document.createElement('div');
+//     monthDiv.innerText = item.monthDuration +' '+ 'month';
+//
+//     let hourDiv = document.createElement('div');
+//     hourDiv.innerText = item.hourDuration +' '+ 'hour';
+//
+//     let ulList = document.createElement('ul');
+//     ulList.classList.add('list');
+//
+//
+//     for (const value of item.modules) {
+//         let liList = document.createElement('li');
+//         liList.innerText = value;
+//         ulList.appendChild(liList)
+//     }
+//
+//     headDiv.append(titleDiv, monthDiv, hourDiv,ulList );
+//     document.body.appendChild(headDiv);
+//
+//
+// }
 
+// - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
+// let p = document.createElement('p')
+// p.id = 'text';
+// p.innerText = 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum';
+// let button = document.createElement('button');
+// button.innerText = 'text';
+// button.onclick = function (){
+//     p.style.display = 'none';
+// }
+// document.body.append(p, button)
 
-for (const item of coursesArray) {
-    let titleDiv = document.createElement('div');
-    titleDiv.innerText = item.title;
+//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+// let input = document.createElement('input');
+// input.placeholder = 'userage';
+// let btn = document.createElement('button');
+// btn.innerText = 'complete';
+// btn.onclick = function (){
+//     if (input.value < 18){
+//         alert('Vxid zaboroneno')
+//     }else {
+//         alert('Laskavo prosymo')
+//     }
+// }
+//
+// document.body.append(input, btn)
 
-    let monthDiv = document.createElement('div');
-    monthDiv.innerText = item.monthDuration +' '+ 'month';
-
-    let hourDiv = document.createElement('div');
-    hourDiv.innerText = item.hourDuration +' '+ 'hour';
-
-    let ulList = document.createElement('ul');
-    ulList.classList.add('list');
-
-
-    for (const value of item.modules) {
-        let liList = document.createElement('li');
-        liList.innerText = value;
-        ulList.appendChild(liList)
-    }
-
-    headDiv.append(titleDiv, monthDiv, hourDiv,ulList );
-    document.body.appendChild(headDiv);
-
-
-}
+// *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+//     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+// (Додатковачастина для завдання)
+// let form = document.createElement('form');
+// let calc = (str)=>{
+//     let count = 0;
+//     for (const item of str) {
+//         count ++
+//     }
+// return count
+// }
+// let calcWord = (str)=>{
+//     let  count1 = 0;
+//     let arr = str.split(' ')
+//     for (const item of arr) {
+//         count1 ++;
+//     }
+//     return count1
+// }
+// let input1 = document.createElement('input')
+// input1.placeholder = 'word count';
+// let input2 = document.createElement('input')
+// input2.placeholder = 'symbol count';
+// let input3 = document.createElement('input')
+// input3.placeholder = 'content'
+// let div = document.createElement('div');
+// div.style.width = '500px';
+// div.style.height = '100px';
+//
+// let p1 = document.createElement('p');
+// input1.oninput = function (){p1.innerText = calcWord(this.value)}
+//
+// let p2 = document.createElement('p');
+// input3.oninput = function (){p2.innerText = this.value}
+//
+// let p3 = document.createElement('p');
+// input2.oninput = function (){p3.innerText = calc(this.value)}
+// div.append(p1, p2, p3)
+//
+// let btn = document.createElement('button');
+// btn.innerText = 'Press'
+//
+// btn.onclick = function (){
+//    document.body.append(div)
+//
+// }
+//
+// form.append(input1,input2,input3)
+// document.body.append(form, btn)
 
 
 
