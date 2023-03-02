@@ -270,52 +270,35 @@
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
-// let form = document.createElement('form');
-// let calc = (str)=>{
-//     let count = 0;
-//     for (const item of str) {
-//         count ++
-//     }
-// return count
-// }
-// let calcWord = (str)=>{
-//     let  count1 = 0;
-//     let arr = str.split(' ')
-//     for (const item of arr) {
-//         count1 ++;
-//     }
-//     return count1
-// }
-// let input1 = document.createElement('input')
-// input1.placeholder = 'word count';
-// let input2 = document.createElement('input')
-// input2.placeholder = 'symbol count';
-// let input3 = document.createElement('input')
-// input3.placeholder = 'content'
-// let div = document.createElement('div');
-// div.style.width = '500px';
-// div.style.height = '100px';
-//
-// let p1 = document.createElement('p');
-// input1.oninput = function (){p1.innerText = calcWord(this.value)}
-//
-// let p2 = document.createElement('p');
-// input3.oninput = function (){p2.innerText = this.value}
-//
-// let p3 = document.createElement('p');
-// input2.oninput = function (){p3.innerText = calc(this.value)}
-// div.append(p1, p2, p3)
-//
-// let btn = document.createElement('button');
-// btn.innerText = 'Press'
-//
-// btn.onclick = function (){
-//    document.body.append(div)
-//
-// }
-//
-// form.append(input1,input2,input3)
-// document.body.append(form, btn)
+
+let input1 = document.getElementById('1');
+let input2 = document.getElementById('2');
+let input3 = document.getElementById('3');
+let btn = document.getElementsByClassName('btn')[0];
+
+btn.onclick = function (){
+ let num = Number.parseInt(input1.value,10);
+    let numS = Number.parseInt(input2.value,10);
+    let table = document.createElement('table');
+    table.style.border = '1px solid'
+    for (let i = 0; i < num; i++) {
+        let tr = document.createElement('tr');
+
+        for (let j = 0; j < numS; j++) {
+            let td = document.createElement('td')
+            td.innerText = input3.value;
+            td.style.border = '1px solid'
+            tr.appendChild(td)
+            table.appendChild(tr);
+        }
+        document.body.appendChild(table)
+    }
+}
+
+
+
+
+
 
 
 
