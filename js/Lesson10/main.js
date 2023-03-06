@@ -4,12 +4,20 @@
 // let inputSurname = document.getElementById('2');
 // let inputAge = document.getElementById('3');
 // let btn = document.getElementsByClassName('btn')[0]
+// function clear (){
+//     document.getElementById('1').value = '';
+//     document.getElementById('2').value = '';
+//     document.getElementById('3').value = '';
+// }
+//
 // btn.onclick = function (eo){
-//    eo.preventDefault()
-//    let div = document.createElement('div');
+//    eo.preventDefault();
+//     let div = document.createElement('div');
 //    let p = document.createElement('p');
-//    p.innerText = `${inputName.value} ${inputSurname.value} ${inputAge.value}`;
+//    p.innerText = `Name: ${inputName.value}, Surname: ${inputSurname.value}, Age:${inputAge.value}`;
+//     clear();
 //    div.append(p);
+//
 //    document.body.append(div)
 //
 // }
@@ -17,10 +25,14 @@
 // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 // ==========================
 // let div = document.getElementById('number-block');
-// let number = localStorage.getItem('number') || localStorage.setItem('number', div.innerText='0');
-//  number++;
-//  div.innerText = number;
-//  localStorage.setItem('number', number);
+// if(localStorage.getItem('number')){
+//     let num = localStorage.getItem('number')
+//         num++;
+//     div.innerText = num;
+//     localStorage.setItem('number', num)
+// }else {
+//     localStorage.setItem('number',div.innerText ='0')
+// }
 
 // Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація про дату та час відвідування сторінки. Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
 // =========================
@@ -28,6 +40,10 @@
 // let timestamp = new Date().toLocaleString();
 // sessions.push(timestamp);
 // localStorage.setItem('sessions', JSON.stringify(sessions));
+// let btN = document.getElementsByClassName('btn-page')[0];
+// btN.onclick = function () {
+//     window.location.href = 'sessions.html'
+// }
 
 //     зробити масив на 100 об'єктів та дві кнопки prev next
 // при завантажені сторінки з'являються перші 10 об'єктів.
@@ -635,37 +651,40 @@ let users = [
         "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
     }
 ];
-let x = 0;
-window.onload = function () {
-    for (let i = 0; i < 10; i++) {
-        const user = users[i];
-        let div = document.createElement('div');
-        div.setAttribute('id','div')
-        div.innerText = user.id;
-        document.body.appendChild(div);
-    }
-    x = 10;
-}
-let btnNext = document.getElementsByName('btnNext')[0];
-let btnPrev = document.getElementsByName('btnPrev')[0];
-btnNext.addEventListener('click' , function () {
-    for (let i = x;  i<x+10; i++) {
-        const argument = users[i];
-        let a = document.getElementById('div')
-        a.innerText = argument.id
-        document.body.appendChild(a)
-    }
-     x += 10
-})
-btnPrev.addEventListener('click', function (){
-    for (let i = x; i < x+10; i++) {
-        const user = users[i];
-        let b = document.getElementById('div')
-        b.innerText = user.id
-        document.body.appendChild(b)
-    }
-    x-=10
-})
+// let x = 0;
+// window.onload = function () {
+//     for (let i = 0; i < 10; i++) {
+//         const user = users[i];
+//         let div = document.createElement('div');
+//         div.setAttribute('id','div')
+//         div.innerText = `id: ${user.id}, title: ${user.title}`;
+//         document.body.appendChild(div);
+//     }
+//     x = 10;
+// }
+// let btnNext = document.getElementsByName('btnNext')[0];
+// let btnPrev = document.getElementsByName('btnPrev')[0];
+// btnNext.addEventListener('click' , function () {
+//
+//     for (let i = x;  i<x+10; i++) {
+//         const argument = users[i];
+//         let a = document.getElementById('div')
+//         a.innerText = `id: ${argument.id}, title: ${argument.title}`
+//         document.body.appendChild(a)
+//     }
+//      x += 10
+// })
+// btnPrev.addEventListener('click', function (){
+//     x-=10;
+//
+//     for (let i = x; i < x+10; i++) {
+//         const user = users[i];
+//         let b = document.getElementById('div')
+//         b.innerText =`id: ${user.id}, title: ${user.title}`
+//         document.body.appendChild(b)
+//     }
+//
+// })
 
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.

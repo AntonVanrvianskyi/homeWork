@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<button name="btnS" >Back</button>
 <script>
     let arr = localStorage.getItem('sessions');
     let parse = JSON.parse(arr);
@@ -12,6 +13,10 @@
         let div = document.createElement('div');
         div.innerText = item;
         document.body.appendChild(div)
+    }
+    let but = document.getElementsByName('btnS')[0];
+    but.onclick = function () {
+        window.location.href = 'index.html'
     }
 </script>
 </body>
