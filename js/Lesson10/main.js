@@ -651,40 +651,46 @@ let users = [
         "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
     }
 ];
-// let x = 0;
-// window.onload = function () {
-//     for (let i = 0; i < 10; i++) {
-//         const user = users[i];
-//         let div = document.createElement('div');
-//         div.setAttribute('id','div')
-//         div.innerText = `id: ${user.id}, title: ${user.title}`;
-//         document.body.appendChild(div);
-//     }
-//     x = 10;
-// }
-// let btnNext = document.getElementsByName('btnNext')[0];
-// let btnPrev = document.getElementsByName('btnPrev')[0];
-// btnNext.addEventListener('click' , function () {
-//
-//     for (let i = x;  i<x+10; i++) {
-//         const argument = users[i];
-//         let a = document.getElementById('div')
-//         a.innerText = `id: ${argument.id}, title: ${argument.title}`
-//         document.body.appendChild(a)
-//     }
-//      x += 10
-// })
-// btnPrev.addEventListener('click', function (){
-//     x-=10;
-//
-//     for (let i = x; i < x+10; i++) {
-//         const user = users[i];
-//         let b = document.getElementById('div')
-//         b.innerText =`id: ${user.id}, title: ${user.title}`
-//         document.body.appendChild(b)
-//     }
-//
-// })
+let x = 0;
+window.onload = function () {
+    for (let i = 0; i < 10; i++) {
+        const user = users[i];
+        let div = document.createElement('div');
+        div.setAttribute('id','div')
+        div.innerText = `id: ${user.id}, title: ${user.title}`;
+        document.body.appendChild(div);
+    }
+    x = 10;
+}
+let btnNext = document.getElementsByName('btnNext')[0];
+let btnPrev = document.getElementsByName('btnPrev')[0];
+
+
+btnNext.addEventListener('click' , function () {
+    if (x>1){
+        btnPrev.removeAttribute('disabled')
+    }
+
+    for (let i = x;  i<x+10; i++) {
+        const argument = users[i];
+        let a = document.getElementById('div')
+        a.innerText = `id: ${argument.id}, title: ${argument.title}`
+        document.body.appendChild(a)
+    }
+     x += 10
+})
+btnPrev.addEventListener('click', function (){
+
+    x-=10;
+
+    for (let i = x; i < x+10; i++) {
+        const user = users[i];
+        let b = document.getElementById('div')
+        b.innerText =`id: ${user.id}, title: ${user.title}`
+        document.body.appendChild(b)
+    }
+
+})
 
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
