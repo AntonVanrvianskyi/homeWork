@@ -3,7 +3,7 @@ let arr = [];
 function explorer (htmlElement){
 
 
-    console.log(htmlElement)
+
 let children = htmlElement.children
 if (htmlElement.children.length!==0) {
 
