@@ -1,9 +1,6 @@
 // написати рекурсивну функцію, яка збирає всі назви класів з файлу rules.html в окремий масив. масив вивести в консоль
 let arr = [];
 function explorer (htmlElement){
-
-
-
 let children = htmlElement.children
 if (htmlElement.children.length!==0) {
 
@@ -14,8 +11,7 @@ if (htmlElement.children.length!==0) {
             explorer(value)
     }
 }
-
 }
 explorer(document.body);
 
-console.log(...new Set(arr))
+console.log([...new Set(arr)])
