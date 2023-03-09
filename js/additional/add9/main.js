@@ -269,7 +269,7 @@ function explorer(element,object) {
     const list = document.getElementsByTagName('ul')
     for (let i = 0; i < element.childNodes.length; i++) {
         let child = element.childNodes[i];
-        if (child.nodeName.match(/^H\d/)) {
+        if (child.nodeName==='H1') {
 
             object.hedings.push(child.textContent);
 
