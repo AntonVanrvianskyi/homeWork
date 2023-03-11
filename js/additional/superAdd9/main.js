@@ -122,6 +122,31 @@ let users = [{
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам , блок з адресою зробити окремим блоком, з блоками для кожної властивості
 // підкажіть як запихнути в div значення об'єкта address
 
+function renderList (object) {
+    const wrapper = document.createElement('div')
+    Object.keys(object).forEach(key => {
+        const item = document.createElement('div')
+        if (typeof object[key] === 'object') {
+            item.append(renderList(object[key]) )
+        } else {
+            item.innerText = `${key}: ${object[key]}`
+        }
+        wrapper.append(item)
+    })
+    return wrapper
+}
+function iteratorArray(array) {
+        for ({name, age, status, ...rest }of array) {
+            const wrap = document.createElement('div');
+            wrap.classList.add('user');
+            const childDiv = document.createElement('div');
+            childDiv.innerText = `Name:${name},Age:${age},Status:${status}`
+            childDiv.classList.add('userCharacters');
+            wrap.append(childDiv,renderList(rest) )
+            document.body.appendChild(wrap);
+        }
+}
+iteratorArray(users);
 
 // let rules = [
 //     {
